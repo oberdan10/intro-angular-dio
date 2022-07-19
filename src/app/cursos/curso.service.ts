@@ -9,6 +9,10 @@ export class CursoService {
     retrieveAll() : Curso[]{
         return cursos;
     }
+
+    retrieveById(id: Number){
+        return cursos.find((interadorCurso: Curso) => interadorCurso.id === id);
+    }
 }
 
 var cursos: Curso[] = [

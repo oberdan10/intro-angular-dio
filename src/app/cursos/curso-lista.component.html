@@ -1,6 +1,6 @@
 <h2>Lista de Cursos</h2>
 
-<div class="form-group row">
+<div class="form-group row ">
     <label for="" class="col-sm-2 col-form-label">Filtrar Por:</label>
     <div class="col-sm-10">
         <input [(ngModel)]="filtrar" type="text" class="form-control">
@@ -26,7 +26,7 @@
             <td>
                 <app-estrelas [avaliacao]="curso.rating"></app-estrelas>
             </td>
-            <td> </td>
+            <td><a [routerLink]="['/cursos/info', curso.id]" class="btn btn-primary">Editar</a></td>
         </tr>
     </tbody>
 </table>

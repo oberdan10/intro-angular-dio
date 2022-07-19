@@ -1,0 +1,86 @@
+<h2>Informações de Curso</h2>
+<hr>
+<form #cursoForm="ngForm">
+    <div class="form-group row ">
+        <label for="" class="col-sm-2 col-form-label">Id:</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso!.id" placeholder="id" name="id" required [ngClass]="{'is-invalid': cursoId.invalid}" #cursoId="ngModel" type="text" class="form-control">
+            <div class="invalid-feedback">
+                <span >Valor não informado!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row ">
+        <label for="" class="col-sm-2 col-form-label">Nome:</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso!.name" placeholder="name" name="name" required [ngClass]="{'is-invalid': cursoName.invalid}" #cursoName="ngModel" type="text" class="form-control">
+            <div class="invalid-feedback">
+                <span >Valor não informado!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row ">
+        <label for="" class="col-sm-2 col-form-label">Data de Lançamento:</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso!.releaseDate" placeholder="dataLancamento" name="dataLancamento" required [ngClass]="{'is-invalid': cursoReleaseDate.invalid}" #cursoReleaseDate="ngModel" type="text" class="form-control">
+            <div class="invalid-feedback">
+                <span >Valor não informado!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row ">
+        <label for="" class="col-sm-2 col-form-label">Descrição:</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso!.description" placeholder="descricao" name="descricao" required [ngClass]="{'is-invalid': cursoDescription.invalid}" #cursoDescription="ngModel" type="text" class="form-control">
+            <div class="invalid-feedback">
+                <span >Valor não informado!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row ">
+        <label for="" class="col-sm-2 col-form-label">Duração:</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso!.duration" placeholder="duracao" name="duracao" required [ngClass]="{'is-invalid': cursoDuration.invalid}" #cursoDuration="ngModel" type="text" class="form-control">
+            <div class="invalid-feedback">
+                <span >Valor não informado!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row ">
+        <label for="" class="col-sm-2 col-form-label">Código:</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso!.code" placeholder="codigo" name="codigo" required [ngClass]="{'is-invalid': cursoCode.invalid}" #cursoCode="ngModel" type="text" class="form-control">
+            <div class="invalid-feedback">
+                <span >Valor não informado!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row ">
+        <label for="" class="col-sm-2 col-form-label">Avaliação:</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso!.rating" placeholder="avaliação" name="avaliacao" required [ngClass]="{'is-invalid': cursoRating.invalid}" #cursoRating="ngModel" type="text" class="form-control">
+            <div class="invalid-feedback">
+                <span >Valor não informado!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row ">
+        <label for="" class="col-sm-2 col-form-label">Preço:</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso!.code" placeholder="preço" name="preco" required [ngClass]="{'is-invalid': cursoPrice.invalid}" #cursoPrice="ngModel" type="text" class="form-control">
+            <div class="invalid-feedback">
+                <span >Valor não informado!</span>
+            </div>
+        
+        </div>
+    </div>
+    <button [disabled]="cursoForm.invalid" class="btn btn-primary mr-2">Salvar</button>
+    <button class="btn btn-primary nr-2">Fechar</button>
+</form>
